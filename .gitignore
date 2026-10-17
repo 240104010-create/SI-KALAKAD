@@ -1,0 +1,22 @@
+# Dependencies & cache
+/vendor/
+node_modules/
+.env
+.env.local
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+/tmp/
+/cache/
+.vercel
