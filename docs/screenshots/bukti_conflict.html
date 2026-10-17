@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0; padding: 20px; background: #0f172a; font-family: 'Consolas', 'Courier New', monospace; color: #f8fafc;
+  }
+  .terminal {
+    background: #1e293b; border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px rgba(0,0,0,0.5); overflow: hidden;
+  }
+  .header {
+    background: #0f172a; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #334155;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .red { background: #ef4444; } .yellow { background: #f59e0b; } .green { background: #10b981; }
+  .title { margin-left: 12px; font-size: 13px; color: #94a3b8; font-weight: bold; }
+  .body { padding: 18px 20px; font-size: 13.5px; line-height: 1.6; }
+  .cmd { color: #38bdf8; font-weight: bold; }
+  .prompt { color: #4ade80; }
+  .commit { color: #fbbf24; }
+  .head { color: #f43f5e; font-weight: bold; }
+  .dim { color: #64748b; }
+  .danger { color: #ef4444; font-weight: bold; }
+  .success { color: #34d399; font-weight: bold; }
+  .card {
+    background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 12px 14px; margin: 10px 0;
+  }
+  .badge { background: #22c55e; color: #052e16; font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="terminal">
+  <div class="header">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+    <span class="title">Simulasi & Resolusi Konflik Git — Feature Branching & Pull Request</span>
+  </div>
+  <div class="body">
+    <div><span class="prompt">Roikhan@LAPTOP-ROIKHAN</span> <span class="dim">MINGW64 /c/Users/Indah Dwi/kalender-akademik</span> <span class="head">(main)</span></div>
+    <div><span class="cmd">$ git merge feature/filter-kegiatan</span></div>
+    <div>Auto-merging index.php</div>
+    <div class="danger">CONFLICT (content): Merge conflict in index.php</div>
+    <div>Automatic merge failed; fix conflicts and then commit the result.</div>
+    <br>
+    <div><span class="cmd">$ git diff index.php</span></div>
+    <div class="card">
+      <div style="color: #94a3b8;">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div>
+      <div style="color: #f43f5e;">+ $appVersion = "v1.1.0-production-main";</div>
+      <div style="color: #94a3b8;">=======</div>
+      <div style="color: #38bdf8;">+ $appVersion = "v1.2.0-feature-filter";</div>
+      <div style="color: #94a3b8;">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/filter-kegiatan</div>
+    </div>
+    <div><span class="dim"># Menyelesaikan konflik secara manual pada index.php menjadi $appVersion = "v1.2.0-stable"</span></div>
+    <div><span class="cmd">$ git add index.php</span></div>
+    <div><span class="cmd">$ git commit -m "merge: menyelesaikan konflik merge antara branch main dan feature/filter-kegiatan"</span></div>
+    <div class="success">[main aac51f6] merge: menyelesaikan konflik merge antara branch main dan feature/filter-kegiatan</div>
+    <br>
+    <div class="card" style="border-left: 4px solid #22c55e;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-weight: bold; color: #fff;">GitHub Repository & Pull Request Live</span>
+        <span class="badge">Open & Active</span>
+      </div>
+      <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">
+        Repository: <span style="color: #38bdf8;">https://github.com/240104010-create/SI-KALAKAD</span><br>
+        Pull Request #1: <span style="color: #38bdf8;">https://github.com/240104010-create/SI-KALAKAD/pull/1</span><br>
+        Branch: <span style="color: #fbbf24;">main</span> &larr; <span style="color: #38bdf8;">feature/pengingat-agenda</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

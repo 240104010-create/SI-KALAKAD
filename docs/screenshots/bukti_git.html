@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0; padding: 20px; background: #0f172a; font-family: 'Consolas', 'Courier New', monospace; color: #f8fafc;
+  }
+  .terminal {
+    background: #1e293b; border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px rgba(0,0,0,0.5); overflow: hidden;
+  }
+  .header {
+    background: #0f172a; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #334155;
+  }
+  .dot { width: 12px; height: 12px; rounded: 50%; border-radius: 50%; display: inline-block; }
+  .red { background: #ef4444; } .yellow { background: #f59e0b; } .green { background: #10b981; }
+  .title { margin-left: 12px; font-size: 13px; color: #94a3b8; font-weight: bold; }
+  .body { padding: 18px 20px; font-size: 13.5px; line-height: 1.6; }
+  .cmd { color: #38bdf8; font-weight: bold; }
+  .prompt { color: #4ade80; }
+  .commit { color: #fbbf24; }
+  .head { color: #f43f5e; font-weight: bold; }
+  .dim { color: #64748b; }
+  .success { color: #34d399; font-weight: bold; }
+  .warn { color: #fb923c; }
+</style>
+</head>
+<body>
+<div class="terminal">
+  <div class="header">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+    <span class="title">Git Bash — C:/Users/Indah Dwi/kalender-akademik (main)</span>
+  </div>
+  <div class="body">
+    <div><span class="prompt">Roikhan@LAPTOP-ROIKHAN</span> <span class="dim">MINGW64 /c/Users/Indah Dwi/kalender-akademik</span> <span class="head">(main)</span></div>
+    <div><span class="cmd">$ git log --oneline -n 6</span></div>
+    <div><span class="commit">9488907</span> (HEAD -> main, origin/main) feat: penambahan 10 agenda akademik lengkap, modal syarat & ketentuan, dan sistem bookmark</div>
+    <div><span class="commit">ca9d68f</span> fix: routing serverless php vercel ke api/index.php dan validasi deployment live</div>
+    <div><span class="commit">aac51f6</span> merge: menyelesaikan konflik merge antara branch main dan feature/filter-kegiatan</div>
+    <div><span class="commit">a756fb5</span> fix: penetapan versi rilis v1.1.0-production-main pada branch main</div>
+    <div><span class="commit">0ae1f60</span> (origin/feature/filter-kegiatan) feat: optimasi variabel versi pada feature/filter-kegiatan</div>
+    <div><span class="commit">9e4c24b</span> docs: penambahan dokumen analisis kebutuhan fungsional dan model SDLC</div>
+    <br>
+    <div><span class="prompt">Roikhan@LAPTOP-ROIKHAN</span> <span class="dim">MINGW64 /c/Users/Indah Dwi/kalender-akademik</span> <span class="head">(main)</span></div>
+    <div><span class="cmd">$ echo "&lt;!-- Uji coba perubahan sebelum commit --&gt;" &gt;&gt; index.php</span></div>
+    <div><span class="cmd">$ git status</span></div>
+    <div>On branch main</div>
+    <div>Changes not staged for commit:</div>
+    <div class="dim">&nbsp;&nbsp;(use "git add &lt;file&gt;..." to update what will be committed)</div>
+    <div class="dim">&nbsp;&nbsp;(use "git restore &lt;file&gt;..." to discard changes in working directory)</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="warn">modified:&nbsp;&nbsp;&nbsp;index.php</span></div>
+    <div>no changes added to commit (use "git add" and/or "git commit -a")</div>
+    <br>
+    <div><span class="prompt">Roikhan@LAPTOP-ROIKHAN</span> <span class="dim">MINGW64 /c/Users/Indah Dwi/kalender-akademik</span> <span class="head">(main)</span></div>
+    <div><span class="cmd">$ git restore index.php</span></div>
+    <div><span class="cmd">$ git status</span></div>
+    <div>On branch main</div>
+    <div class="success">nothing to commit, working tree clean</div>
+  </div>
+</div>
+</body>
+</html>
