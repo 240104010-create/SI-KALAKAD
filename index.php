@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+// Versi Aplikasi Kalender Akademik
+$appVersion = "v1.1.0-production-main";
+
 // Database konfigurasi & data agenda akademik mock untuk demo logika sistem
 $events = [
     [
